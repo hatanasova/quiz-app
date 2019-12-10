@@ -1,0 +1,49 @@
+@import './bootstrap_custom.scss';
+@import '@fortawesome/fontawesome-free';
+
+.jumbotron {
+  background-image: linear-gradient(to right top, #ff8066, #d15874, #924176, #4c3265, #021f44);
+  background-position: center;
+  height: 600px;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  color: #fff !important;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.container {
+  padding-top: 6em;
+}
+
+.container .btn {
+  margin: 0.5em;
+}
+
+.row {
+	display: inline;
+	margin-right: auto;
+	margin-left: auto;
+	float: none;
+  padding: 2em;
+}
+
+.card {
+  display: inline-block;
+  margin: 3em;
+}
+
+/* Footer CSS */
+.page-footer {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.media-icons {
+  padding-top: 1em;
+}
