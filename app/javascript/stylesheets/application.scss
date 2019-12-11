@@ -1,6 +1,11 @@
 @import './bootstrap_custom.scss';
 @import '@fortawesome/fontawesome-free';
 
+body {
+  padding-top: 36px;
+  font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
 .jumbotron {
   background-image: linear-gradient(to right top, #ff8066, #d15874, #924176, #4c3265, #021f44);
   background-position: center;
@@ -38,6 +43,49 @@
   margin: 3em;
 }
 
+/*Errors CSS */
+#error_explanation {
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 30px;
+	margin-top: -30px;
+	background-color: #09203fdb;
+	box-shadow: 10px 10px 10px 0px #8292b0;
+	border: 1px solid #09203fdb;
+	border-radius: 10px;
+}
+
+/* Sign Up form CSS */
+.new_user {
+  height: 450px;
+  color: #fff;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  display: block;
+}
+
+//SignUp Buttons
+.signup {
+  background-image: linear-gradient(to bottom, #051937, #153456, #255276, #367297, #4893b7);
+  color: #fff;
+}
+
+.btn-md {
+  width: 104px;
+}
+
+.signup .col-md-12 {
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-md-8 {
+  max-width: 100% !important;
+}
+
 /* Footer CSS */
 .page-footer {
   background-color: #343a40;
@@ -46,4 +94,14 @@
 
 .media-icons {
   padding-top: 1em;
+}
+
+.media-icons a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.media-icons a:hover {
+  text-decoration: none;
+  color: #FFEFBA;
 }
