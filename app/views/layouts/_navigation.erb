@@ -20,12 +20,17 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <%= link_to 'Edit Profile', edit_user_registration_path, class: 'dropdown-item' %>
           <div class="dropdown-divider"></div>
           <%= link_to 'Sign Out', destroy_user_session_path, class: 'dropdown-item', method: :delete %>
         </div>
       </li>
       <% end %>
+
+      <!-- Redirect to all Quizzes  -->
+      <li class="nav-item active">
+        <%= link_to 'All Quizzes', quizzes_path, class: 'nav-link' %>
+      </li>
     </ul>
 
     <form class="form-inline my-2 my-lg-0">

@@ -105,3 +105,47 @@ body {
   text-decoration: none;
   color: #FFEFBA;
 }
+
+label {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*  Edit User CSS */
+.signup .container {
+  width: 40%;
+}
+
+.actions .update {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.actions .btn-md {
+  margin: 10px 0 5px 0;
+  width: 48%;
+  float: none;
+}
+.edit-user .btn {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.delete-account {
+  padding-bottom: 15px;
+}
+
+/* Forgot Password in Login Form */
+.forgot-pass {
+  color: #fff;
+  text-decoration: none;
+}
+
+.forgot-pass:hover {
+  font-weight: 500;
+  color: #FFEFBA;
+  text-decoration: none;
+}
+
+/* Show Quizzes CSS */
