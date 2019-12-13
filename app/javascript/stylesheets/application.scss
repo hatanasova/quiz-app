@@ -38,6 +38,7 @@ body {
   padding: 2em;
 }
 
+/* Homepage Cards */
 .card {
   display: inline-block;
   margin: 3em;
@@ -170,7 +171,7 @@ label {
   padding-bottom: 3em;
 }
 
-.card {
+.quiz-card .card {
 	width: 80%;
 	background-color: #fff;
 	color: #000;
@@ -181,18 +182,18 @@ label {
 	display: block;
 }
 
-.card-body {
+.quiz-card .card-body {
   padding: 0 0 2em 0;
 }
 
-.card-title {
+.quiz-card .card-title {
 	background-color: #adf;
 	border: 3px solid #adf;
 	margin: 0;
 	padding: 0;
 }
 
-.card-text {
+.quiz-card .card-text {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
