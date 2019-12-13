@@ -67,8 +67,13 @@ body {
 }
 
 /* SignUp Buttons */
-.signup, .login, .reset-pass, .edit-pass {
+.signup, .login, .reset-pass, .edit-pass, .quiz-form, {
   background-image: linear-gradient(to bottom, #051937, #153456, #255276, #367297, #4893b7);
+  color: #fff;
+}
+
+.show-quizzes {
+  background-image: linear-gradient(to top, #051937, #153456, #255276, #367297, #4893b7);
   color: #fff;
 }
 
@@ -159,4 +164,55 @@ label {
   width: 100%;
 }
 
-/* Show Quizzes CSS */
+/* Quizzes CSS */
+//All quizzes CSS
+.show-quizzes.container {
+  padding-bottom: 3em;
+}
+
+.card {
+	width: 80%;
+	background-color: #fff;
+	color: #000;
+	text-align: center;
+	padding: 0 0 2em 0;
+  margin: 0 auto;
+	float: none;
+	display: block;
+}
+
+.card-body {
+  padding: 0 0 2em 0;
+}
+
+.card-title {
+	background-color: #adf;
+	border: 3px solid #adf;
+	margin: 0;
+	padding: 0;
+}
+
+.card-text {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background-color: #eee;
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+.show-quizzes .col-md-8 {
+  text-align: center;
+}
+
+.show-quizzes .col-md-8 .btn-info {
+	color: #fff;
+	background-color: #4187ab;
+	border-color: #4086aa;
+}
+
+.show-quizzes .col-md-8 .btn-info:hover {
+	color: #fff;
+	background-color: #133153;
+	border-color: #133153;
+}
