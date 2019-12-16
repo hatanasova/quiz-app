@@ -14,20 +14,24 @@
             <%= truncate(quiz.description, length: 100) %>
           </div>
 
-          <div class="article-actions">
-            <div class="btn btn-group">
-              <%= link_to 'Edit', edit_quiz_path(quiz), class: "btn btn-primary btn-md" %>
-              <%= link_to 'Delete', quiz, class: "btn btn-danger btn-md", method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% if user_signed_in? && (current_user == quiz.user)%>
+            <div class="article-actions">
+              <div class="btn btn-group">
+                <%= link_to 'Edit', edit_quiz_path(quiz), class: "btn btn-primary btn-md" %>
+                <%= link_to 'Delete', quiz, class: "btn btn-danger btn-md", method: :delete, data: { confirm: 'Are you sure?' } %>
+              </div>
             </div>
-          </div>
+          <% end %>
         </div>
 
         <% end %>
 
       </div>
-      <div class="col-md-8">
-        <%= link_to 'New Quiz', new_quiz_path, class: "btn btn-info btn-lg" %>
-      </div>
+      <% if user_signed_in? %>
+        <div class="col-md-8">
+          <%= link_to 'New Quiz', new_quiz_path, class: "btn btn-info btn-lg" %>
+        </div>
+      <% end %>
     </div>
 
   </div>
