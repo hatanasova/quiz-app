@@ -1,0 +1,33 @@
+<%= form_with(model: category, local: true) do |f| %>
+  <% if category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% category.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h1 class="text-center">New Category</h1>
+
+  <div class="form-group">
+    <div class="field">
+      <%= f.text_field :name, class: "form-control col-md-8", placeholder: "Category Name", autofocus: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="field">
+      <%= f.text_area :desc, class: "form-control col-md-8", placeholder: "Category Description (Desc)", autofocus: true  %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: 'btn btn-light btn-category-new' %>
+  </div>
+
+  <%= link_to 'All Categories', categories_path %>
+<% end %>

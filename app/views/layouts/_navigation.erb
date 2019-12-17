@@ -21,8 +21,9 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <!-- <a class="dropdown-item" href="#">Action</a> -->
           <%= link_to 'New Quiz', new_quiz_path, class: 'dropdown-item' %>
-          <%= link_to 'Edit Profile', edit_user_registration_path, class: 'dropdown-item' %>
+          <%= link_to 'New Category', new_category_path, class: 'dropdown-item' %>
           <div class="dropdown-divider"></div>
+          <%= link_to 'Edit Profile', edit_user_registration_path, class: 'dropdown-item' %>
           <%= link_to 'Sign Out', destroy_user_session_path, class: 'dropdown-item', method: :delete %>
         </div>
       </li>
@@ -31,6 +32,9 @@
       <!-- Redirect to all Quizzes  -->
       <li class="nav-item active">
         <%= link_to 'All Quizzes', quizzes_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to 'All Categories', categories_path, class: 'nav-link' %>
       </li>
     </ul>
 

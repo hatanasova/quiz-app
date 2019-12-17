@@ -15,10 +15,14 @@ class QuizzesController < ApplicationController
   # GET /quizzes/new
   def new
     @quiz = Quiz.new
+    # @categories = Category.all
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # GET /quizzes/1/edit
   def edit
+    # @categories = Category.all
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # POST /quizzes
@@ -26,6 +30,7 @@ class QuizzesController < ApplicationController
   def create
     @quiz = Quiz.new(quiz_params)
     @quiz.user = current_user
+    @quiz.category_id = params[:category_id]
 
     respond_to do |format|
       if @quiz.save
@@ -41,6 +46,11 @@ class QuizzesController < ApplicationController
   # PATCH/PUT /quizzes/1
   # PATCH/PUT /quizzes/1.json
   def update
+    # @categories = Category.all
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
+    @quiz.category_id = params[:category_id]
+
+
     respond_to do |format|
       if @quiz.update(quiz_params)
         format.html { redirect_to @quiz, notice: 'Quiz was successfully updated.' }

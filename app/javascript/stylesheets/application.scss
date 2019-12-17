@@ -217,3 +217,48 @@ label {
 	background-color: #133153;
 	border-color: #133153;
 }
+
+/* Select category button when creating new quiz */
+.container .btn-category{
+  margin: 0 !important;
+}
+
+/*Create New Category CSS*/
+.category-form,
+.categories-list {
+  background-image: linear-gradient(to bottom, #051937, #002c45, #003d49, #004d44, #355b3d);
+  color: #fff;
+}
+
+.category-form .container {
+  padding-bottom: 20px;
+  width: 60%;
+}
+
+input.btn.btn-light.btn-category-new {
+  margin: 0 0 0.5em 0;
+}
+
+.category-form form {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+.category-form .container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*View Quiz CSS */
+.card.bg-light.mb-3 {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    display: inherit;
+  }
+
+  .show-quiz .container {
+    padding-top: 0;
+  }

@@ -31,9 +31,13 @@
         </div>
       </div>
 
+      <div class="dropdown btn text-center" style="background-color: #fff; margin: 0;">
+        <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category", class: "dropdown-item btn btn-light btn-category") %>
+      </div>
+
       <div class="actions">
         <%= f.submit class: "btn btn-light btn-md"%> <br>
-        <%= link_to 'All Quizzes', quizzes_path, class: "btn btn-outline-light btn-md" %>
+        <%= link_to 'Go Back to Quizzes', quizzes_path, class: "btn btn-outline-light btn-md" %>
       </div>
       <% end %>
     </div>

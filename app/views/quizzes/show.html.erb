@@ -1,7 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="show-quiz">
+  <div class="container">
 
-<%= simple_format(@quiz.title) %>
-<%= simple_format(@quiz.description) %>
+    <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_quiz_path(@quiz) %> |
-<%= link_to 'Back', quizzes_path %>
+    <!-- <%= simple_format(@quiz.title) %>
+    <%= simple_format(@quiz.description) %>
+
+    <div class="show_category">Category:
+      <%= simple_format(@quiz.category.name) %>
+    </div>
+
+    <%= link_to 'Edit', edit_quiz_path(@quiz) %> |
+    <%= link_to 'Back', quizzes_path %> -->
+
+    <div class="card bg-light mb-3" style="max-width: 18rem;">
+      <div class="card-header"><%= simple_format(@quiz.title) %></div>
+      <div class="card-body ">
+        <h5 class="card-title"></h5>
+        <p class="card-text"><%= simple_format(@quiz.category.name) %></p>
+      </div>
+      <div class="card-footer bg-transparent border-light">
+        <%= link_to 'Edit', edit_quiz_path(@quiz) %>
+        <%= link_to 'Back', quizzes_path %>
+      </div>
+    </div>
+
+  </div>
+</div>
