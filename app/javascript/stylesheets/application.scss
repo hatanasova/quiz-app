@@ -6,6 +6,10 @@ body {
   font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 }
 
+h1 {
+  margin-bottom: 1em;
+}
+
 .jumbotron {
   background-image: linear-gradient(to right top, #ff8066, #d15874, #924176, #4c3265, #021f44);
   background-position: center;
@@ -24,13 +28,14 @@ body {
 
 .container {
   padding-top: 4em;
+  max-width: 90%;
 }
 
 .container .btn {
   margin: 0.5em;
 }
 
-.row {
+.container-fluid .row {
 	display: inline;
 	margin-right: auto;
 	margin-left: auto;
@@ -39,7 +44,7 @@ body {
 }
 
 /* Homepage Cards */
-.card {
+.container-fluid .row .text-center .card {
   display: inline-block;
   margin: 3em;
 }
@@ -171,45 +176,23 @@ label {
   padding-bottom: 3em;
 }
 
-.quiz-card .card {
-	width: 80%;
-	background-color: #fff;
-	color: #000;
-	text-align: center;
-	padding: 0 0 2em 0;
+.show-quizzes .card {
+  width: 300px;
+  height: 350px;
+  display: inline-flex;
   margin: 0 auto;
-	float: none;
-	display: block;
+  margin-bottom: 15px;
 }
 
-.quiz-card .card-body {
-  padding: 0 0 2em 0;
-}
-
-.quiz-card .card-title {
-	background-color: #adf;
-	border: 3px solid #adf;
-	margin: 0;
-	padding: 0;
-}
-
-.quiz-card .card-text {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	background-color: #eee;
-	padding: 1em;
-	margin-bottom: 1em;
-}
-
+/* New Quiz Button */
 .show-quizzes .col-md-8 {
   text-align: center;
 }
 
 .show-quizzes .col-md-8 .btn-info {
 	color: #fff;
-	background-color: #4187ab;
-	border-color: #4086aa;
+	background-color: #4389ae;
+	border-color: #4389ae;
 }
 
 .show-quizzes .col-md-8 .btn-info:hover {
@@ -253,10 +236,11 @@ input.btn.btn-light.btn-category-new {
 
 /* List all categories card css */
 .categories-list .card {
-    display: inline-block;
-    margin: 3em 0.5em 3em 0.5em;
-    width: 200px;
-    height: auto;
+  display: inline-flex;
+  margin: 0 auto;
+  width: 250px;
+  height: 260px;
+  margin-bottom: 15px;
 }
 
 .card-header a{

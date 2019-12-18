@@ -1,42 +1,36 @@
 <div class="show-quizzes">
   <div class="container">
-    <h1 class="text-center">All Quizzes</h1>
 
-    <div class="quiz-card">
-      <div class="card">
-        <% @quizzes.each do |quiz| %>
+  <h1 class="text-center">All Quizzes</h1>
 
-        <div class="card-body">
-          <div class="card-title">
-            <%= link_to quiz.title, quiz_path(quiz) %>
-          </div>
-          <div class="card-text">
-            <%= truncate(quiz.description, length: 100) %>
-          </div>
-
-          <div class="show_category">
-            <%= simple_format("Category: " + quiz.category.name) %>
-          </div>
-
-          <% if user_signed_in? && (current_user == quiz.user)%>
-            <div class="article-actions">
-              <div class="btn btn-group">
-                <%= link_to 'Edit', edit_quiz_path(quiz), class: "btn btn-primary btn-md" %>
-                <%= link_to 'Delete', quiz, class: "btn btn-danger btn-md", method: :delete, data: { confirm: 'Are you sure?' } %>
-              </div>
-            </div>
-          <% end %>
-        </div>
-
-        <% end %>
-
+  <div class="row">
+  <% @quizzes.each do |quiz| %>
+    <div class="card text-white bg-dark text-center" style="max-width: 18rem;">
+      <div class="card-header text-center">
+        <%= link_to quiz.title, quiz_path(quiz) %>
       </div>
-      <% if user_signed_in? %>
-        <div class="col-md-8">
-          <%= link_to 'New Quiz', new_quiz_path, class: "btn btn-info btn-lg" %>
-        </div>
-      <% end %>
+      <div class="card-body ">
+        <p class="card-text text-center"><%= truncate(quiz.description, length: 100) %></p>
+      </div>
+      <div class="card-footer">
+        <p class="card-text text-center"><small><%= simple_format("Category: " + quiz.category.name) %></small></p>
+        <% if user_signed_in? && (current_user == quiz.user)%>
+          <div class="article-actions">
+            <div class="btn btn-group">
+              <%= link_to 'Edit', edit_quiz_path(quiz), class: "btn btn-primary btn-md" %>
+              <%= link_to 'Delete', quiz, class: "btn btn-danger btn-md", method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
+    <% end %>
+  </div>
+  <!-- <% if user_signed_in? %>
+    <div class="col-md-8">
+      <%= link_to 'New Quiz', new_quiz_path, class: "btn btn-info btn-lg" %>
+    </div>
+  <% end %> -->
 
   </div>
 </div>
