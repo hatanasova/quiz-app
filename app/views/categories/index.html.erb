@@ -5,17 +5,28 @@
 
     <div class="row">
       <% @categories.each do |category| %>
-      <div class="card text-white bg-dark text-center" style="max-width: 18rem;">
-        <div class="card-header text-center">
-          <%= link_to "#{category.name}", category_path(category) %>
+        <div class="card text-white bg-dark text-center" style="max-width: 18rem;">
+          <div class="card-header text-center">
+            <%= link_to "#{category.name}", category_path(category) %>
+          </div>
+          <div class="card-body ">
+            <p class="card-text text-center"><%= category.desc %></p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text text-center">
+              <small><%= pluralize(category.quizzes.count, "quiz") %></small>
+            </p>
+
+            <% if user_signed_in? && (current_user)%>
+              <div class="category-actions">
+                <div class="btn btn-group">
+                  <%= link_to 'Edit', edit_category_path(category), class: "btn btn-primary btn-md" %>
+                  <%= link_to 'Delete', category, class: "btn btn-danger btn-md", method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+              </div>
+            <% end %>
+          </div>
         </div>
-        <div class="card-body ">
-          <p class="card-text text-center"><%= category.desc %></p>
-        </div>
-        <div class="card-footer">
-          <p class="card-text text-center"><small><%= pluralize(category.quizzes.count, "quiz") %></small> </p>
-        </div>
-      </div>
       <% end %>
     </div>
     <!-- <%= link_to 'New Category', new_category_path %> -->

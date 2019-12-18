@@ -32,7 +32,8 @@ h1 {
 }
 
 .container .btn {
-  margin: 0.5em;
+  margin: 0;
+  width: 20%;
 }
 
 .container-fluid .row {
@@ -178,7 +179,8 @@ label {
 
 .show-quizzes .card {
   width: 300px;
-  height: 350px;
+  height: auto;
+  // height: 350px;
   display: inline-flex;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -199,6 +201,13 @@ label {
 	color: #fff;
 	background-color: #133153;
 	border-color: #133153;
+}
+
+/*Quiz and Category Action Buttons */
+.show-quizzes .container .btn,
+.categories-list .container .btn {
+  margin: 0;
+  width: 100%;
 }
 
 /* Select category button when creating new quiz */
@@ -239,7 +248,8 @@ input.btn.btn-light.btn-category-new {
   display: inline-flex;
   margin: 0 auto;
   width: 250px;
-  height: 260px;
+  height: auto;
+  // height: 260px;
   margin-bottom: 15px;
 }
 
