@@ -31,7 +31,7 @@ h1 {
   max-width: 90%;
 }
 
-.container .btn {
+.jumbotron .container .btn {
   margin: 0;
   width: 20%;
 }
@@ -74,7 +74,7 @@ h1 {
 }
 
 /* SignUp Buttons */
-.signup, .login, .reset-pass, .edit-pass, .quiz-form, {
+.signup, .login, .reset-pass, .edit-pass, .quiz-form, .edit-profile {
   background-image: linear-gradient(to bottom, #051937, #153456, #255276, #367297, #4893b7);
   color: #fff;
 }
@@ -127,7 +127,7 @@ label {
 }
 
 /*  Edit User CSS */
-.signup .container {
+.edit-profile .container {
   width: 40%;
 }
 
@@ -172,6 +172,14 @@ label {
 }
 
 /* Quizzes CSS */
+//New Quiz
+.quiz-form .col-md-12 {
+	flex: 0 0 100%;
+	max-width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 20px;
+}
 //All quizzes CSS
 .show-quizzes.container {
   padding-bottom: 3em;
