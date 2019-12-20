@@ -20,6 +20,8 @@ class QuizQuestionsController < ApplicationController
 
   # GET /quiz_questions/1/edit
   def edit
+    @quizzes = Quiz.all.map{|q| [ q.title, q.id ] }
+    @quiz_question.quiz_id = params[:quiz_id]
   end
 
   # POST /quiz_questions
@@ -44,6 +46,10 @@ class QuizQuestionsController < ApplicationController
   # PATCH/PUT /quiz_questions/1
   # PATCH/PUT /quiz_questions/1.json
   def update
+    @quiz_question = QuizQuestion.new(quiz_question_params)
+    @quizzes = Quiz.all.map{|q| [ q.title, q.id ] }
+    @quiz_question.quiz_id = params[:quiz_id]
+
     respond_to do |format|
       if @quiz_question.update(quiz_question_params)
         format.html { redirect_to @quiz_question, notice: 'Quiz question was successfully updated.' }

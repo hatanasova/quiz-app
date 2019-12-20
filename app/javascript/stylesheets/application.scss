@@ -79,7 +79,7 @@ h1 {
   color: #fff;
 }
 
-.show-quizzes, .quiz_question {
+.show-quizzes, .quiz_question, .show-quiz_questions {
   background-image: linear-gradient(to top, #051937, #153456, #255276, #367297, #4893b7);
   color: #fff;
 }
@@ -187,7 +187,8 @@ label {
   background-image: linear-gradient(to right top, #ff8066, #d15874, #924176, #4c3265, #021f44);
 }
 
-.show-quizzes .card {
+.show-quizzes .card,
+.show-quiz_questions .card {
   width: 300px;
   height: auto;
   // height: 350px;
@@ -206,7 +207,8 @@ label {
 
 /*Padding to single category and single quiz view */
 .show-quiz .container,
-.show-category .container {
+.show-category .container,
+.show-quiz_questions .container {
   padding-top: 40px;
   padding-bottom: 30px;
 }
