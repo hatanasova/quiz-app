@@ -79,7 +79,7 @@ h1 {
   color: #fff;
 }
 
-.show-quizzes {
+.show-quizzes, .quiz_question {
   background-image: linear-gradient(to top, #051937, #153456, #255276, #367297, #4893b7);
   color: #fff;
 }
@@ -181,8 +181,10 @@ label {
 	padding-bottom: 20px;
 }
 //All quizzes CSS
-.show-quizzes.container {
-  padding-bottom: 3em;
+/* Show Quiz CSS*/
+/* Set view category background-color as show-quiz */
+.show-quiz, .show-category {
+  background-image: linear-gradient(to right top, #ff8066, #d15874, #924176, #4c3265, #021f44);
 }
 
 .show-quizzes .card {
@@ -193,6 +195,22 @@ label {
   margin: 0 auto;
   margin-bottom: 15px;
 }
+
+/*View Single Quiz CSS */
+.card.bg-light.mb-3 {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  display: inherit;
+}
+
+/*Padding to single category and single quiz view */
+.show-quiz .container,
+.show-category .container {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
 
 /* New Quiz Button */
 .show-quizzes .col-md-8 {
@@ -267,14 +285,8 @@ input.btn.btn-light.btn-category-new {
   text-transform: capitalize;
 }
 
-/*View Quiz CSS */
-.card.bg-light.mb-3 {
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-    display: inherit;
-  }
-
-  .show-quiz .container {
-    padding-top: 0;
-  }
+/* Quiz Question CSS*/
+.quiz_question .container {
+  width: 70%;
+  padding-bottom: 2em;
+}

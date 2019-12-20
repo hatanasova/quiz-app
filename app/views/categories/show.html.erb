@@ -1,14 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="show-category">
+  <div class="container">
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+    <!-- <p id="notice"><%= notice %></p> -->
 
-<p>
-  <strong>Desc:</strong>
-  <%= @category.desc %>
-</p>
+    <div class="card bg-light mb-3" style="max-width: 18rem;">
+      <div class="card-header"><%= @category.name %></div>
+      <div class="card-body ">
+        <h5 class="card-title"></h5>
+        <p class="card-text"><%= @category.desc %></p>
+      </div>
+      <div class="card-footer bg-transparent border-light">
+        <%= link_to 'Edit', edit_category_path(@category) %> |
+        <%= link_to 'Back', categories_path %>
+      </div>
+    </div>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+
+
+  </div>
+</div>

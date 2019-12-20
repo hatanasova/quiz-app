@@ -15,6 +15,7 @@ class QuizQuestionsController < ApplicationController
   # GET /quiz_questions/new
   def new
     @quiz_question = QuizQuestion.new
+    @quizzes = Quiz.all.map{|q| [ q.title, q.id ] }
   end
 
   # GET /quiz_questions/1/edit
@@ -25,9 +26,12 @@ class QuizQuestionsController < ApplicationController
   # POST /quiz_questions.json
   def create
     @quiz_question = QuizQuestion.new(quiz_question_params)
+    @quizzes = Quiz.all.map{|q| [ q.title, q.id ] }
+    @quiz_question.quiz_id = params[:quiz_id]
 
     respond_to do |format|
       if @quiz_question.save
+
         format.html { redirect_to @quiz_question, notice: 'Quiz question was successfully created.' }
         format.json { render :show, status: :created, location: @quiz_question }
       else
@@ -69,6 +73,6 @@ class QuizQuestionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quiz_question_params
-      params.fetch(:quiz_question, {})
+      params.fetch(:quiz_question, {}).permit(:correct_answer, :quiz_id, :description)
     end
 end

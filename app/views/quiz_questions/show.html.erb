@@ -1,4 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+<div class="card bg-light mb-3" style="max-width: 18rem;">
+  <div class="card-header"><%= @quiz_question.description %></div>
+
+  <div class="card-body ">
+    <%= @quiz_question.correct_answer %>
+  </div>
+
+  <div class="card-footer bg-transparent border-light">
+    <%= %>
+    <%= %>
+  </div>
+</div>
+
 <%= link_to 'Edit', edit_quiz_question_path(@quiz_question) %> |
 <%= link_to 'Back', quiz_questions_path %>
